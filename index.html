@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Find Fibonacci to the Nth number</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body>
+
+  <h1>Find Fibonacci Sequence to the Nth number</h1>
+
+  <button onclick="myFunction()">Try It!</button>
+
+  <p id="demo"></p>
+
+  <script>
+    //Find Fibonacci to the Nth number
+
+    //Establish Fibonacci Formula
+    // Fn = Fn-1 + Fn-2 (the -1 and -2 are referring to binary / position in sequence)
+    // 0 1 1 2 3 5 8 
+    // Fn = 8 + 5 
+    //Fn = 13
+    
+    const n = 0;
+    const n1 = 1;
+
+    //toFixed method allows the selection of 'x' number of decimal places
+    function myFunction() {
+      let selection = prompt("Please enter a number from 1 to 25", " ");
+      if (selection < 1 || selection > 25) {
+        alert("Please choose again, between 1 and 25")
+      } else {
+        document.getElementById('demo').innerHTML =
+          fib.toFixed(selection);
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>
